@@ -1,0 +1,34 @@
+<!-- <!DOCTYPE html> -->
+<!-- <html> -->
+  <head>
+    <title>Sign Up</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/importer.css">
+    <!--STYLES END-->
+
+    <!--Added this so the client has access to the csrf tag and it's grabbed first service side on every page -->
+    <script type="text/javascript">
+    window.SAILS_LOCALS = { _csrf: "<%= _csrf %>" };
+    </script>
+  </head>
+
+  <body>
+    <h1>Sign up</h1>
+
+    <form action="/signup" method="POST">
+      <input type="text" name="name" placeholder="name">
+      <input type="text" name="email" placeholder="email">
+      <input type="password" name="password" placeholder="password">
+      <button type="submit">Submit</button>
+    </form>
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+<!-- </html> -->

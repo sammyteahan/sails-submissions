@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <script type="text/javascript">
+    window.SAILS_LOCALS = { _csrf: "<%= _csrf %>" };
+    </script>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form action="/login" method="POST">
+      <input type="text" name="email" placeholder="email">
+      <input type="password" name="password" placeholder="password">
+      <button type="submit">Submit</button>
+    </form>
+    <script src="/js/dependencies/sails.io.js"></script>
+  </body>
+</html>
