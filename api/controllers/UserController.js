@@ -8,7 +8,7 @@
  module.exports = {
 
    /**
-   * @params email {string}
+   * @param email {string}
    *
    * Check provided password against users in the DB
    * and create a sessions if we find a match
@@ -21,7 +21,7 @@
        if(!user) return res.notFound();
 
        /**
-       * Check password hash
+       * @desc check password hash
        */
        require('machinepack-passwords').checkPassword({
          passwordAttempt: req.param('password'),
@@ -35,7 +35,7 @@
          },
 
          /**
-         * Store user id in our session,
+         * @desc store user id in our session,
          * and return ok
          */
          success: function() {
@@ -50,9 +50,9 @@
    },
 
    /**
-   * @params name {string}
-   * @params email {string}
-   * @params password {string}
+   * @param name {string}
+   * @param email {string}
+   * @param password {string}
    */
    signup: function(req, res) {
      
@@ -98,7 +98,7 @@
    },
 
    /**
-   * Clear session data
+   * @desc clear session data
    *
    * @todo findOne is throwing an error (sometimes) 
    * saying it needs criteria (no req.session.me?)

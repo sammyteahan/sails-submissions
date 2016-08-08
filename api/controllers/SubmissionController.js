@@ -17,17 +17,27 @@ module.exports = {
         return res.negotiate(err);
       }
 
+      /**
+       * @todo this isn't a spa yet, so don't treat
+       * it like one; return a flash message, but
+       * stay on the same page
+       * @todo when it is a spa, this should just
+       * send res.ok();
+       */
       return res.json({
         id: newSubmission.id
       });
     });
   },
 
+  /**
+  * @todo filter submission list by user and
+  * return appropriate subset
+  */
   get: function(req, res) {
     Submission.find().exec(function (err, submissions) {
       res.send(submissions);
-    });  
+    });
   }
-	
-};
 
+};
