@@ -55,7 +55,7 @@
    * @param password {string}
    */
    signup: function(req, res) {
-     
+
      var Passwords = require('machinepack-passwords');
 
      /**
